@@ -76,7 +76,7 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        # Find user by email entered.
+        # Find user by email entered
         result = db.session.execute(db.select(User).where(User.email == email))
         user = result.scalar()
 
